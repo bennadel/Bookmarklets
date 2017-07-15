@@ -35,9 +35,9 @@
 			bottom: 100px ;
 			color: #000000 ;
 			font-family: monospace ;
-			font-size: 16px ;
+			font-size: 18px ;
 			left: 100px ;
-			line-height: 24px ;
+			line-height: 27px ;
 			margin: 0px 0px 0px 0px ;
 			overflow: auto ;
 			padding: 30px 30px 30px 30px ;
