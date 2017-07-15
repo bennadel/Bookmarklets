@@ -13,7 +13,7 @@ can be successfully parsed as JSON, it will be opened up and displayed in a moda
 that will output the JSON using pretty(ish)-print formatting.
 
 ```js
-javascript:(function(d,b,f){f="loggly-json-modal.js",u=(b+f+"?="+Date.now()),s=d.createElement("script");s.setAttribute("src",u);d.body.appendChild(s);})(document,"https://bennadel.github.io/Bookmarklets/");void(0);
+javascript:(function(d,b,f,u,s){f="loggly-json-modal.js";u=(b+f+"?="+Date.now());s=d.createElement("script");s.setAttribute("src",u);d.body.appendChild(s);})(document,"https://bennadel.github.io/Bookmarklets/");void(0);
 ```
 
 ### Loggly - Search Formatting
@@ -23,7 +23,7 @@ contrast, changing the font, and adding some breathing room (making it all look 
 more like Kibana).
 
 ```js
-javascript:(function(d,b,f){f="loggly-search-formatting.js",u=(b+f+"?="+Date.now()),s=d.createElement("script");s.setAttribute("src",u);d.body.appendChild(s);})(document,"https://bennadel.github.io/Bookmarklets/");void(0);
+javascript:(function(d,b,f,u,s){f="loggly-search-formatting.js";u=(b+f+"?="+Date.now());s=d.createElement("script");s.setAttribute("src",u);d.body.appendChild(s);})(document,"https://bennadel.github.io/Bookmarklets/");void(0);
 ```
 
 [bennadel]: http://www.bennadel.com
