@@ -5,7 +5,7 @@
 
 	styleTag.setAttribute( "type", "text/css" );
 	styleTag.setAttribute( "data-caution", "Injected by bookmarklet" );
-	styleTag.innerText = `
+	styleTag.innerHTML = `
 		html,
 		html * {
 			pointer-events: auto !important ;
