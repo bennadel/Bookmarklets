@@ -1,7 +1,7 @@
 
 # Bookmarklet Scripts
 
-by [Ben Nadel][bennadel] (on [Google+][googleplus])
+by [Ben Nadel][bennadel]
 
 These are some simple Bookmarklets that I use to inject Scripts and additional formatting
 into various websites and applications.
@@ -26,5 +26,14 @@ more like Kibana).
 javascript:(function(d,b,f,u,s){f="loggly-search-formatting.js";u=(b+f+"?="+Date.now());s=d.createElement("script");s.setAttribute("src",u);d.body.appendChild(s);})(document,"https://bennadel.github.io/Bookmarklets/");void(0);
 ```
 
-[bennadel]: http://www.bennadel.com
-[googleplus]: https://plus.google.com/108976367067760160494?rel=author
+### General - Capture Pointer Events
+
+This injects a `style` tag that enables `pointer-events` on the root element. And then,
+attempts to force the cascade of `pointer-events` down the DOM tree using the
+`!important` modifier.
+
+```js
+javascript:(function(d,b,f,u,s){f="capture-pointer-events.js";u=(b+f+"?="+Date.now());s=d.createElement("script");s.setAttribute("src",u);d.body.appendChild(s);})(document,"https://bennadel.github.io/Bookmarklets/");void(0);
+```
+
+[bennadel]: https://www.bennadel.com
