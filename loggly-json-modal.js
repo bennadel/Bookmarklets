@@ -9,6 +9,7 @@
 	var body = $( document.body );
 	var outer = $( "<div></div>" ).addClass( "bnb-outer" );
 	var inner = $( "<pre></pre>" ).addClass( "bnb-inner" );
+	var explore = $( "<a></a>" ).addClass( "bnb-explore" );
 	var style = $( "<style></style>" ).attr( "type", "text/css" );
 
 	// Setup the CSS styles to be used by the bookmarklet.
@@ -29,8 +30,8 @@
 		}
 
 		.bnb-inner {
-			background-color: #FFFFFF ;
-			border: 1px solid #CCCCCC ;
+			background-color: #ffffff ;
+			border: 1px solid #cccccc ;
 			border-radius: 7px 7px 7px 7px ;
 			bottom: 100px ;
 			color: #000000 ;
@@ -48,8 +49,23 @@
 		}
 
 		.bnb-inner strong {
-			color: #AA0000 ;
+			color: #aa0000 ;
 			font-weight: 400 ;
+		}
+
+		.bnb-explore {
+			background-color: #ffffff ;
+			border-radius: 5px ;
+			color: #aa0000 ;
+			display: none ;
+			padding: 7px 13px 8px 13px ;
+			position: absolute ;
+			right: 5px ;
+			top: 5px ;
+		}
+
+		.bnb-explore--active {
+			display: block ;
 		}
 	`;
 
@@ -101,6 +117,19 @@
 
 				// Show the modal window.
 				outer.addClass( "bnb-outer--active" );
+
+				// Try to add the explore button, which requires the btoa() function.
+				try {
+
+					explore.attr( "href", `https://bennadel.github.io/JSON-Explorer/dist/#${ btoa( payload ) }` );
+					explore.addClass( "bnb-explore--active" );
+
+				} catch ( error ) {
+
+					console.warn( "Explore button could not be rendered." );
+					console.error( error );
+
+				}
 				
 			} catch ( error ) {
 
@@ -122,6 +151,7 @@
 			if ( outer.is( event.target ) ) {
 
 				outer.removeClass( "bnb-outer--active" );
+				explore.removeClass( "bnb-explore--active" );
 				
 			}
 
@@ -146,6 +176,6 @@
 
 	// Add all the nodes to the active documents.
 	head.append( style.html( styles ) );
-	body.append( outer.append( inner ) );
+	body.append( outer.append( explore ).append( inner ) );
 
 })();
