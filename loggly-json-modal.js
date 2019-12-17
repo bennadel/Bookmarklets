@@ -9,7 +9,7 @@
 	var body = $( document.body );
 	var outer = $( "<div></div>" ).addClass( "bnb-outer" );
 	var inner = $( "<pre></pre>" ).addClass( "bnb-inner" );
-	var explore = $( "<a></a>" ).addClass( "bnb-explore" );
+	var explore = $( "<a></a>" ).addClass( "bnb-explore" ).attr( "target", "_blank" );
 	var style = $( "<style></style>" ).attr( "type", "text/css" );
 
 	// Setup the CSS styles to be used by the bookmarklet.
@@ -55,7 +55,7 @@
 
 		.bnb-explore {
 			background-color: #ffffff ;
-			border-radius: 5px ;
+			border-radius: 5px 5px 5px 5px ;
 			color: #aa0000 ;
 			display: none ;
 			padding: 7px 13px 8px 13px ;
