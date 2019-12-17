@@ -9,7 +9,7 @@
 	var body = $( document.body );
 	var outer = $( "<div></div>" ).addClass( "bnb-outer" );
 	var inner = $( "<pre></pre>" ).addClass( "bnb-inner" );
-	var explore = $( "<a></a>" ).addClass( "bnb-explore" ).attr( "target", "_blank" );
+	var explore = $( "<a>Explore</a>" ).addClass( "bnb-explore" ).attr( "target", "_blank" );
 	var style = $( "<style></style>" ).attr( "type", "text/css" );
 
 	// Setup the CSS styles to be used by the bookmarklet.
@@ -85,7 +85,8 @@
 
 				// Parse the JSON content and then re-stringify it so that it is 
 				// formatted for easier reading.
-				var payload = JSON.parse( node.text() );
+				var jsonContent = node.text();
+				var payload = JSON.parse( jsonContent );
 				var content = JSON.stringify( payload, null, 4 );
 
 				// Inject the value into the modal window using .text() so that any HTML
@@ -121,7 +122,7 @@
 				// Try to add the explore button, which requires the btoa() function.
 				try {
 
-					explore.attr( "href", `https://bennadel.github.io/JSON-Explorer/dist/#${ btoa( payload ) }` );
+					explore.attr( "href", `https://bennadel.github.io/JSON-Explorer/dist/#${ btoa( jsonContent ) }` );
 					explore.addClass( "bnb-explore--active" );
 
 				} catch ( error ) {
