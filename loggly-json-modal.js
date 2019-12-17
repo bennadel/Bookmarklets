@@ -54,7 +54,6 @@
 		}
 
 		.bnb-explore,
-		.bnb-explore:active,
 		.bnb-explore:visited {
 			background-color: #ffffff ;
 			border-radius: 5px 5px 5px 5px ;
