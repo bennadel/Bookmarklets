@@ -53,7 +53,9 @@
 			font-weight: 400 ;
 		}
 
-		.bnb-explore {
+		.bnb-explore,
+		.bnb-explore:active,
+		.bnb-explore:visited {
 			background-color: #ffffff ;
 			border-radius: 5px 5px 5px 5px ;
 			color: #aa0000 ;
@@ -62,6 +64,11 @@
 			position: absolute ;
 			right: 5px ;
 			top: 5px ;
+		}
+
+		.bnb-explore:hover {
+			background-color: #aa0000 ;
+			color: #ffffff ;
 		}
 
 		.bnb-explore--active {
